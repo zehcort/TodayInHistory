@@ -30,10 +30,10 @@ object DataModule {
 
     @Provides
     @Singleton
-    fun provideOwWeatherApi(retrofit: Retrofit): NumbersApi = retrofit.create(NumbersApi::class.java)
+    fun providerNumbersApi(retrofit: Retrofit): NumbersApi = retrofit.create(NumbersApi::class.java)
 
     @Provides
     @Singleton
-    fun provideWeatherRepository(numbersApi: NumbersApi): NumbersRepository =
+    fun provideNumbersRepository(numbersApi: NumbersApi): NumbersRepository =
         NumbersRepositoryImpl(numbersApi = numbersApi)
 }
