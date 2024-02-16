@@ -5,9 +5,8 @@ import com.zehcort.data.datasources.remote.api.numbers.NumbersApi
 import com.zehcort.data.dtos.toDomain
 import com.zehcort.domain.models.DateFact
 import com.zehcort.domain.repositories.NumbersRepository
-import javax.inject.Inject
 
-class NumbersRepositoryImpl @Inject constructor(
+class NumbersRepositoryImpl(
     private val numbersApi: NumbersApi
 ) : NumbersRepository {
     override suspend fun getDateFact(day: Int, month: Int): DateFact =

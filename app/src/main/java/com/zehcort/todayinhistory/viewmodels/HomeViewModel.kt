@@ -7,14 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.zehcort.domain.usecases.GetDateFact
 import com.zehcort.domain.utils.Resource
 import com.zehcort.todayinhistory.states.HomeUiState
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.LocalDate
-import javax.inject.Inject
 
-@HiltViewModel
-class HomeViewModel @Inject constructor(
+class HomeViewModel(
     private val getDateFact: GetDateFact
 ) : ViewModel() {
     private val _homeUiState = mutableStateOf(HomeUiState())

@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.dagger.hilt.android")
     id("org.jetbrains.kotlin.kapt")
 }
 
@@ -61,10 +60,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-    implementation("com.google.dagger:hilt-android:2.50")
-    kapt("com.google.dagger:hilt-android-compiler:2.50")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
     implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
 }
 
 // Allow references to generated code
